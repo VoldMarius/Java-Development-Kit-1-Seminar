@@ -1,6 +1,8 @@
 package JFrame;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,7 +40,18 @@ public class SettingsWindow extends JFrame {
         panBottom.add(sizeField);
         panBottom.add(lengthСombinationToWin);
         panBottom.add(lengthToWin);
-
+        sizeField.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                dimensionsPlayingField.setText("Размер поля :    "+sizeField.getValue());
+            }
+        });
+        lengthToWin.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                lengthСombinationToWin.setText("Kомбинация для победы : "+lengthToWin.getValue());
+            }
+        });
         panBottom.add(btnStart);
         btnStart.addActionListener(new ActionListener() {
             @Override
