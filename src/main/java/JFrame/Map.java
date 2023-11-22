@@ -30,7 +30,7 @@ public class Map extends JPanel {
     private static final String MSG_DRAW = "Ничья!";
     private boolean isGameOver;
     private boolean isInitialized;
-    Сhecker  checkWin = new Сhecker(fieldSizeX,winLength);
+
 
     Map(){
         addMouseListener(new MouseAdapter(){
@@ -49,9 +49,10 @@ public class Map extends JPanel {
         field[cellY][cellX] = HUMAN_DOT;
         System.out.printf("x= %d, y= %d", cellX, cellY);
         if(checkEndGame(HUMAN_DOT, STATE_WIN_HUMAN)) return;
+        if(checkEndGame(AI_DOT, STATE_WIN_AI)) return;
         aiTurn();;
         repaint();
-        if(checkEndGame(AI_DOT, STATE_WIN_AI)) return;
+
     }
     public void startNewGame(int mode, int fSzX, int fSzY, int wLen){
         this.mode = mode;
@@ -73,6 +74,7 @@ public class Map extends JPanel {
 
     private void render(Graphics g){
         if(!isInitialized) return;
+
         panelWidth = getWidth();
         panelHeight = getHeight();
         cellWidth = panelWidth/fieldSizeX;
@@ -141,8 +143,89 @@ public class Map extends JPanel {
         return true;
     }
 
+        private boolean isWinningMove(int dot){
+//        Проверяем строки
+        for (int row = 0; row < fieldSizeY; row++) {
+            for (int i = 0; i <= fieldSizeX-winLength; i++) {
+                boolean isWin = true;
+                for (int j = 0; j < winLength; j++) {
+                    if(field[row][i+j]!=dot) {
+                        isWin = false;
+                    }
+                }
+                if(isWin) return true;
+            }
+        }
+      {
+//        Проверяем столбцы
+        for (int column = 0; column < fieldSizeY; column++) {
+            for (int i = 0; i <= fieldSizeY-winLength; i++) {
+                boolean isWin = true;
+                for (int j = 0; j < winLength; j++) {
+                    if(field[i+j][column]!=dot) {
+                        isWin = false;
+                    }
+                }
+                if(isWin) return true;
+            }
+        }
+
+//        Проверяем правые диоганали
+//        Начало диагонали по первому столбцу
+        for (int row = 0; row <= fieldSizeY-winLength; row++) {
+            for (int i = 0; i <= fieldSizeY-row-winLength; i++) {
+                boolean isWin = true;
+                for (int j = 0; j < winLength; j++) {
+                    if(field[row+i+j][i+j]!=dot) {
+                        isWin = false;
+                    }
+                }
+                if(isWin) return true;
+            }
+        }
+//        Начало диагонали по первой строке
+        for (int column = 1; column <= fieldSizeX-winLength; column++) {
+            for (int i = 0; i <= fieldSizeX-column-winLength; i++) {
+                boolean isWin = true;
+                for (int j = 0; j < winLength; j++) {
+                    if(field[i+j][column+i+j]!=dot) {
+                        isWin = false;
+                    }
+                }
+                if(isWin) return true;
+            }
+        }
+
+//        Проверяем левые диоганали
+//        Начало диагонали по первому столбцу
+        for (int row = winLength-1; row < fieldSizeY; row++) {
+            for (int i = 0; i <= row+1-winLength; i++) {
+                boolean isWin = true;
+                for (int j = 0; j < winLength; j++) {
+                    if(field[row-i-j][i+j]!=dot) {
+                        isWin = false;
+                    }
+                }
+                if(isWin) return true;
+            }
+        }
+//        Начало диагонали по последней строке
+        for (int column = 1; column <= fieldSizeX-winLength; column++) {
+            for (int i = 0; i <= fieldSizeX-column-winLength; i++) {
+                boolean isWin = true;
+                for (int j = 0; j < winLength; j++) {
+                    if(field[fieldSizeX-1-i-j][column+i+j]!=dot) {
+                        isWin = false;
+                    }
+                }
+                if(isWin) return true;
+            }
+        }
+
+        return false;
+    }}
     private boolean checkEndGame(int dot, int gameOverType){
-        if(checkWin.isWinningMove(fieldSizeX,fieldSizeY, (char) dot)){
+        if( isWinningMove( dot )){
             this.gameOverType = gameOverType;
             isGameOver=true;
             repaint();
