@@ -12,7 +12,7 @@ public class GameWindow extends JFrame {
     private static final int WINDOW_POSY = 300;
     JButton btnStart = new JButton("New Game");
     JButton btnExit  = new JButton("Exit");
-    Map map;
+    Map map = new Map();
     SettingsWindow settings;
     public GameWindow(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,7 +21,7 @@ public class GameWindow extends JFrame {
         setTitle("TicTacToe");
         setResizable(false);
 
-        map = new Map();
+
         settings  = new SettingsWindow(this);
 
         btnExit.addActionListener(new ActionListener() {
@@ -48,8 +48,7 @@ public class GameWindow extends JFrame {
     }
     void startNewGame ( int mode,int fSzX,int fSzY, int wLen){
 
-        System.out.printf("Mode: %d;\nSize: x=%d, y=%d;\nWin Length: %d",mode,fSzX,fSzY,wLen);
-        repaint();
+        map.startNewGame(mode,fSzX,fSzY,wLen);
 
     }
 }

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cea87fc8-666c-4440-ba10-2b1519f18b5e" name="Changes" comment="Выполнил первое задание семинара">
+    <list default="true" id="cea87fc8-666c-4440-ba10-2b1519f18b5e" name="Changes" comment="Выполнил второе задание семинара">
+      <change afterPath="$PROJECT_DIR$/src/main/java/JFrame/Сhecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JFrame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JFrame/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JFrame/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JFrame/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JFrame/SettingsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JFrame/SettingsWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700555216298</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Выполнил второе задание семинара">
+      <created>1700556788453</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700556788453</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,7 +91,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Выполнил первое задание семинара" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнил первое задание семинара" />
+    <MESSAGE value="Выполнил второе задание семинара" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнил второе задание семинара" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
