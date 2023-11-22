@@ -144,7 +144,7 @@ public class Map extends JPanel {
     }
 
         private boolean isWinningMove(int dot){
-//        Проверяем строки
+
         for (int row = 0; row < fieldSizeY; row++) {
             for (int i = 0; i <= fieldSizeX-winLength; i++) {
                 boolean isWin = true;
@@ -157,7 +157,7 @@ public class Map extends JPanel {
             }
         }
       {
-//        Проверяем столбцы
+
         for (int column = 0; column < fieldSizeY; column++) {
             for (int i = 0; i <= fieldSizeY-winLength; i++) {
                 boolean isWin = true;
@@ -170,8 +170,7 @@ public class Map extends JPanel {
             }
         }
 
-//        Проверяем правые диоганали
-//        Начало диагонали по первому столбцу
+
         for (int row = 0; row <= fieldSizeY-winLength; row++) {
             for (int i = 0; i <= fieldSizeY-row-winLength; i++) {
                 boolean isWin = true;
@@ -183,7 +182,7 @@ public class Map extends JPanel {
                 if(isWin) return true;
             }
         }
-//        Начало диагонали по первой строке
+
         for (int column = 1; column <= fieldSizeX-winLength; column++) {
             for (int i = 0; i <= fieldSizeX-column-winLength; i++) {
                 boolean isWin = true;
@@ -196,8 +195,6 @@ public class Map extends JPanel {
             }
         }
 
-//        Проверяем левые диоганали
-//        Начало диагонали по первому столбцу
         for (int row = winLength-1; row < fieldSizeY; row++) {
             for (int i = 0; i <= row+1-winLength; i++) {
                 boolean isWin = true;
@@ -209,7 +206,7 @@ public class Map extends JPanel {
                 if(isWin) return true;
             }
         }
-//        Начало диагонали по последней строке
+
         for (int column = 1; column <= fieldSizeX-winLength; column++) {
             for (int i = 0; i <= fieldSizeX-column-winLength; i++) {
                 boolean isWin = true;
