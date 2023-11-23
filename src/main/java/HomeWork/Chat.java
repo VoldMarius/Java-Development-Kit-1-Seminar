@@ -22,6 +22,8 @@ public class Chat extends JFrame {
     JTextField loginField;
     JTextField passwordField;
     JTextField messageField;
+    JTextField historyField;
+    JTextArea historyArea;
     JLabel lbLogin;
 
     JLabel lbPassword;
@@ -54,6 +56,15 @@ public class Chat extends JFrame {
         clientPanel.add(lbNewMessage);
         messageField = new JTextField();
         clientPanel.add(messageField);
+
+        //работаем с историе чата
+        historyArea = new JTextArea();
+        clientPanel.add(historyArea);
+        JLabel History = new JLabel("History");
+        clientPanel.add(History);
+        historyField = new JTextField();
+        clientPanel.add(historyField);
+
         sendMessageButton = new JButton("Send");
         clientPanel.add(sendMessageButton);
         add(clientPanel);
@@ -84,8 +95,8 @@ public class Chat extends JFrame {
             }
         });
         try{if (server.isServicesWorking){
-            for (String mess:fileRider.load("chatLog.txt")) {
-                messagesArea.append(MessageSender(mess));
+            for (String mess:fileRider.load("C:\\Users\\Maxim\\Desktop\\GB\\Java Development Kit (лекции)\\GraphicalInterfaces\\src\\main\\java\\logs.txt")) {
+                messagesArea.append(MessageSaver(mess));
             }
         }
         }catch(IOException e){}
@@ -99,13 +110,13 @@ public class Chat extends JFrame {
         String logMessage = String.format("Date/time: %s, User: %s, message: %s\n", new Date(), loginField.getText(), messageField.getText());
         messageField.setText("");
         System.out.printf(logMessage);
-        fileRider.save(logMessage, "chatLog.txt");
+        fileRider.save(logMessage, "C:\\Users\\Maxim\\Desktop\\GB\\Java Development Kit (лекции)\\GraphicalInterfaces\\src\\main\\java\\logs.txt");
     }
 
-    private String  MessageSender(String loadingLine){
+    private String  MessageSaver(String loadingLine){
         int userStart = loadingLine.indexOf("User: ");
         int messageIndex = loadingLine.indexOf(", message: ");
-        String rezult = loadingLine.substring(userStart+6, messageIndex) + loadingLine.substring(messageIndex+9)+"\n";
+        String rezult = loadingLine.substring(userStart+10, messageIndex) + loadingLine.substring(messageIndex+20)+"\n";
         return rezult;
     }
 }
