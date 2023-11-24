@@ -1,8 +1,6 @@
 package HomeWork;
 
 import java.io.*;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +17,7 @@ public class FileMassage {
         }
     }
     public List<String> load(String path)throws IOException{
-        List<String> history = new ArrayList<>();
+        List<String> history;
         try{
             BufferedReader reader = new BufferedReader((new FileReader(new File(path))));
             history = reader.lines().collect(Collectors.toList());

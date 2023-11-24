@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cea87fc8-666c-4440-ba10-2b1519f18b5e" name="Changes" comment="Закончил создание Домашню работу 1 Семинара">
-      <change afterPath="$PROJECT_DIR$/logs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logs.txt" afterDir="false" />
+    <list default="true" id="cea87fc8-666c-4440-ba10-2b1519f18b5e" name="Changes" comment="работаем с историе чата">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chatLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HomeWork/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomeWork/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HomeWork/FileMassage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomeWork/FileMassage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logs.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Maxim/Desktop/GB/Java Development Kit (лекции)/GraphicalInterfaces",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maxim/Desktop/GB/Java Development Kit (лекции)/GraphicalInterfaces&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="JFrame" />
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700655243171</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="работаем с историе чата">
+      <created>1700744987632</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700744987632</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +132,8 @@
     <MESSAGE value="Начал создание метода &quot;Проверки победы&quot;" />
     <MESSAGE value="Закончил создание метода &quot;Проверки победы&quot;" />
     <MESSAGE value="Закончил создание Домашню работу 1 Семинара" />
-    <option name="LAST_COMMIT_MESSAGE" value="Закончил создание Домашню работу 1 Семинара" />
+    <MESSAGE value="работаем с историе чата" />
+    <option name="LAST_COMMIT_MESSAGE" value="работаем с историе чата" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
