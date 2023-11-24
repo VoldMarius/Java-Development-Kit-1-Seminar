@@ -19,7 +19,7 @@ public class FileMassage {
     public List<String> load(String path)throws IOException{
         List<String> history;
         try{
-            BufferedReader reader = new BufferedReader((new FileReader(new File(path))));
+            BufferedReader reader = new BufferedReader((new FileReader(path)));
             history = reader.lines().collect(Collectors.toList());
         }catch(IOException e){
             throw e;

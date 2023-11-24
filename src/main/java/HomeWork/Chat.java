@@ -22,7 +22,7 @@ public class Chat extends JFrame {
     JTextField loginField;
     JTextField passwordField;
     JTextField messageField;
-    JTextField historyField;
+
     JTextArea historyArea;
     JLabel lbLogin;
 
@@ -30,7 +30,7 @@ public class Chat extends JFrame {
 
     JTextArea messagesArea;
     JButton sendMessageButton;
-    public Chat() throws IOException {
+    public Chat()   {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocation(WINDOW_POSX, WINDOW_POSY);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -71,20 +71,17 @@ public class Chat extends JFrame {
         clientPanel.add(sendMessageButton);
         add(clientPanel);
 
-        sendMessageButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {{if (server.isServicesWorking)
-                sendMessage();
-                if (server.isServicesWorking){ try{
-                    for (String mess:fileRider.load("src/main/java/logs.txt")) {
-                        System.out.println(" Архив чата: "+mess);
-                        historyArea.append(MessageMaker(" Архив чата: "+mess));
-                    }
+        sendMessageButton.addActionListener(e -> {{if (server.isServicesWorking)
+            sendMessage();
+            if (server.isServicesWorking){ try{
+                for (String mess:fileRider.load("src/main/java/logs.txt")) {
 
-                }catch(IOException q){}
+                    historyArea.append(MessageMaker(" Архив чата: "+mess));
                 }
+
+            }catch(IOException q){}
             }
-            }
+        }
         });
         messageField.addKeyListener(new KeyListener() {
             @Override
@@ -122,8 +119,7 @@ public class Chat extends JFrame {
     private String  MessageMaker(String loadingLine){
         int userStart = loadingLine.indexOf("User: ");
         int messageIndex = loadingLine.indexOf(", message: ");
-        String rezult = loadingLine.substring(userStart+6, messageIndex) + loadingLine.substring(messageIndex+9)+"\n";
-        return rezult;
+        return loadingLine.substring(userStart+6, messageIndex) + loadingLine.substring(messageIndex+9)+"\n";
     }
 }
 
