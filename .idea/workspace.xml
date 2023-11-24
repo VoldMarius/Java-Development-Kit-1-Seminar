@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cea87fc8-666c-4440-ba10-2b1519f18b5e" name="Changes" comment="работаем с историе чата">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chatLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HomeWork/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomeWork/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HomeWork/FileMassage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomeWork/FileMassage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logs.txt" afterDir="false" />
-    </list>
+    <list default="true" id="cea87fc8-666c-4440-ba10-2b1519f18b5e" name="Changes" comment="Закончил  с историе чата" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700744987632</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Закончил  с историе чата">
+      <created>1700822400056</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700822400056</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Закончил  с историе чата">
+      <created>1700822639150</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700822639150</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +139,8 @@
     <MESSAGE value="Закончил создание метода &quot;Проверки победы&quot;" />
     <MESSAGE value="Закончил создание Домашню работу 1 Семинара" />
     <MESSAGE value="работаем с историе чата" />
-    <option name="LAST_COMMIT_MESSAGE" value="работаем с историе чата" />
+    <MESSAGE value="Закончил  с историе чата" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончил  с историе чата" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
